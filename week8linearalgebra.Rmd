@@ -1,0 +1,34 @@
+---
+title: "Week8linearlgebra"
+output: html_document
+---
+
+Q7.4.2.3
+
+The size of MTM is n x n
+The size of MMT is m x m
+The traces are identical
+
+```{r}
+A <- matrix(c(1,3,2,-1,0,4),nrow=2)
+AT <- t(A)
+
+AAT <- A %*% AT
+ATA <- AT %*% A
+tAAT <- sum(diag(AAT))
+tATA <- sum(diag(ATA))
+
+print(A)
+print(AT)
+print(AAT)
+print(ATA)
+print (tAAT)
+print (tATA)
+
+```
+
+Q7.4.2.7
+
+Multiplying a matrix on the left by a diagonal matrix is like multplying the rows of the matrix by constants which relate to the elements of the diagonal.
+Multiplying a matrix on the right by a diagonal matrix is like multplying the columnskio of the matrix by constants which relate to the elements of the diagonal.
+.
