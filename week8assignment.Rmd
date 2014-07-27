@@ -1,0 +1,19 @@
+---
+title: "Week8Assignment"
+output: html_document
+---
+
+The probability converges to 0.54
+The machine starts to slow after 100,000 sequences and crashes at 1,000,000
+
+
+```{r}
+a <- 0
+p <- 0.0
+for (i in 1:100000) {
+  coin.rle = rle(rbinom(n=100,size=1,prob=0.5))
+  ifelse(max(coin.rle$lengths)>=7,a <- a+1,a <- a)
+  }
+p <- a / i
+print(p)
+...
